@@ -19,4 +19,10 @@ public class Utils {
         System.out.println(introduction);
         scanner.nextLine();
     }
+
+    public static String inputString(String instruction) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print(instruction);
+        return scanner.nextLine();
+    }
 }

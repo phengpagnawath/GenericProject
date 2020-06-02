@@ -1,9 +1,11 @@
 package com.dgb.model.crud;
 
+import java.util.List;
+
 public interface BaseCrud<T,S> {
     void create(T obj);
-    void read();
-    void readOne();
-    void update(S id);
-    void delete(S id);
+    List<T> read();
+    T readOne(S id);
+    boolean update(S id,T newObj);
+    boolean delete(S id);
 }

@@ -5,6 +5,11 @@ public class Article {
     private String title;
     private String description;
 
+    public Article(String title, String description) {
+        this.title = title;
+        this.description = description;
+    }
+
     public Article(int id, String title, String description) {
         this.id = id;
         this.title = title;
@@ -43,4 +48,5 @@ public class Article {
     public void setDescription(String description) {
         this.description = description;
     }
+
 }
