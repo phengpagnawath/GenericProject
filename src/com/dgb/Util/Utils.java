@@ -15,4 +15,8 @@ public class Utils {
             }
         }while (true);
     }
+    public static void pressKeyEnter(String introduction){
+        System.out.println(introduction);
+        scanner.nextLine();
+    }
 }
