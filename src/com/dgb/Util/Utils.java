@@ -11,7 +11,7 @@ public class Utils {
                 String option = scanner.nextLine();
                 return Integer.parseInt(option);
             }catch (Exception e){
-                System.out.println("Something went wrong, the string could not be converted to int.");
+                System.out.println(Constants.INPUT_WRONG_TYPE);
             }
         }while (true);
     }

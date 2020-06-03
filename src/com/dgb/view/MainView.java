@@ -1,14 +1,18 @@
 package com.dgb.view;
 
+import com.dgb.Main;
 import com.dgb.Util.Constants;
 import com.dgb.Util.Utils;
 import com.dgb.controller.ArticleController;
+import com.dgb.controller.CategoryController;
 
 public class MainView {
     private static ArticleController articleController;
+    private static CategoryController categoryController;
 
     public MainView() {
         articleController=new ArticleController();
+        categoryController=new CategoryController();
         displayMenuOption();
     }
     public void displayMenuOption(){
@@ -31,6 +35,9 @@ public class MainView {
                 articleController.deleteArticle();
                 break;
             case 6:
+                displayCategoryMenu();
+                break;
+            case 7:
                 System.out.println(Constants.GOODBYE);
                 System.exit(0);
             default:
@@ -38,5 +45,27 @@ public class MainView {
         }
         Utils.pressKeyEnter(Constants.PRESS_KEY_ENTER);
         displayMenuOption();
+    }
+    public void displayCategoryMenu() {
+        System.out.println(Constants.CATEGORY_MENU_OPTION);
+        int choice=Utils.inputInteger(Constants.CHOOSE_OPTION);
+        switch (choice){
+            case 1:{
+                categoryController.createCategory();
+                break;
+            }
+            case 2:{
+                categoryController.showAllCategory();
+                break;
+            }
+            case 5:
+                String[] strings=new String[]{};
+                Main.main(strings);
+            default:
+                System.out.println(Constants.CHOSE_WRONG_OPTION);
+        }
+        Utils.pressKeyEnter(Constants.PRESS_KEY_ENTER);
+        displayCategoryMenu();
+
     }
 }
