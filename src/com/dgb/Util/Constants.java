@@ -12,5 +12,6 @@ public class Constants {
     public final static String CATEGORY_MENU_OPTION="<---------------------Category-------------------->\n" +
                                                     "1/ Add new category\n2/ Show all category\n" +
                                                     "3/ Update category \n4/ Delete category\n5/ Back\n";
+    public final static String MSG_NOT_FOUND="Not found..!";
 
 }

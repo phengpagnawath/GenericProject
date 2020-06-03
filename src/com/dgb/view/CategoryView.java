@@ -25,7 +25,12 @@ public class CategoryView {
             System.out.println(category.getId()+"\t"+category.getName());
         }
         System.out.println("---------------------------------------------------------------------------");
-
+    }
+    public int getCategoryID(){
+        return Utils.inputInteger("Input ID > ");
+    }
+    public String updateCategory(){
+        return Utils.inputString("Input update name > ");
     }
 
 }

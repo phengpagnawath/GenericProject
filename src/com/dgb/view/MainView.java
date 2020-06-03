@@ -58,6 +58,14 @@ public class MainView {
                 categoryController.showAllCategory();
                 break;
             }
+            case 3:{
+                categoryController.updateCategory();
+                break;
+            }
+            case 4:{
+                categoryController.deleteCategory();
+                break;
+            }
             case 5:
                 String[] strings=new String[]{};
                 Main.main(strings);
@@ -66,6 +74,5 @@ public class MainView {
         }
         Utils.pressKeyEnter(Constants.PRESS_KEY_ENTER);
         displayCategoryMenu();
-
     }
 }

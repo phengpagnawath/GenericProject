@@ -34,11 +34,22 @@ public class CategoryCrud implements BaseCrud<Category,Integer>{
 
     @Override
     public boolean update(Integer id, Category newObj) {
+        for(Category category:dataCenter.getData())
+            if (id==category.getId()) {
+                int index = dataCenter.getData().indexOf(category);
+                dataCenter.getData().get(index).setName(newObj.getName());
+                return true;
+            }
         return false;
     }
 
     @Override
     public boolean delete(Integer id) {
+        for(Category category:dataCenter.getData())
+            if (id==category.getId()) {
+                dataCenter.getData().remove(category);
+                return true;
+            }
         return false;
     }
 }
