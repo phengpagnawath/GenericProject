@@ -13,5 +13,11 @@ public class Constants {
                                                     "1/ Add new category\n2/ Show all category\n" +
                                                     "3/ Update category \n4/ Delete category\n5/ Back\n";
     public final static String MSG_NOT_FOUND="Not found..!";
-
+    public static String INPUT(String str){
+        return "Input "+str;
+    }
+    public final static String LINE="---------------------------------------------------------------------------";
+    public final static String CATEGORY_LIST="ID\tName";
+    public final static String ARTICLE_LIST="ID\tTitle\t\tDescription";
+    public final static String CONFIRM_DELETE="Do you want to delete?(Y/N)";
 }

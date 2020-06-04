@@ -31,7 +31,7 @@ public class ArticleController {
         if(article!=null)
             articleView.displayOneArticle(article);
         else
-            System.out.println("Article not found..!");
+            System.out.println(Constants.MSG_NOT_FOUND);
     }
 
     public void updateArticle(){
@@ -40,19 +40,18 @@ public class ArticleController {
         if(updateArticle!=null){
             //boolean chkNull=articleCrud.update(id,updateArticle);
             if (!articleCrud.update(id,updateArticle))
-                System.out.println("Not found..!");
+                System.out.println(Constants.MSG_NOT_FOUND);
             else
                 System.out.println(Constants.MSG_SUCCESS);
         }
     }
     public void deleteArticle(){
-        System.out.println("Delete Article");
         int id= articleView.getArticleID();
         boolean chk = articleView.deleteArticleView();
         if(chk){
             //boolean chkNull=articleCrud.delete(id);
             if (!articleCrud.delete(id))
-                System.out.println("Not found..!");
+                System.out.println(Constants.MSG_NOT_FOUND);
             else
                 System.out.println(Constants.MSG_SUCCESS);
         }

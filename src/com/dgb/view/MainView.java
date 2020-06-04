@@ -41,7 +41,7 @@ public class MainView {
                 System.out.println(Constants.GOODBYE);
                 System.exit(0);
             default:
-                System.out.println("Wrong Input or Function under construction!");
+                System.out.println(Constants.CHOSE_WRONG_OPTION);
         }
         Utils.pressKeyEnter(Constants.PRESS_KEY_ENTER);
         displayMenuOption();
